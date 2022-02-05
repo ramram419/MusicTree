@@ -12,11 +12,11 @@
 	<link rel="stylesheet" href="${path}/static/css/main.css"/>
 	
 <body>
-	<c:import url="../Top.jsp"/>
+	<c:import url="../../Top.jsp"/>
 	
 	<div class="Mcontent">
-		<div class="position">최신 음악 > 최신 곡</div>
-		<div class="title" style="text-align: center;">최신 곡</div>
+		<div class="title">Top 100</div>
+		<div class="date">2022.01.22 <span>14:00</span></div>
 		<div class="btns">
 			<img src="${path}/static/img/allplay_btn_off@2x.png"/>
 			<img src="${path}/static/img/play_btn_off@2x.png"/>
@@ -26,7 +26,7 @@
 		<div class="musicChart">
 			<div class="chartTop">
 				<div><input type="checkbox" class="allCheck"/></div>
-				<div>NO</div>
+				<div>순위</div>
 				<div>곡정보</div>
 				<div>듣기</div>
 				<div>담기</div>
@@ -37,14 +37,26 @@
 		</div>
 	</div>
 	
-	<c:import url="../footer.jsp"/>
+	<c:import url="../../footer.jsp"/>
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="${path}/static/js/musictree.js"></script>
 	
 	<script>
 		$(document).ready(function(){
+			
+			// 현재 날짜 및 시간 가져오기
+			var date = new Date();
+			var year = date.getFullYear();
+			var month = date.getMonth() + 1;
+			var day = date.getDate();
+			var hour = date.getHours();
+			
+			$(".date").html(year + "." + month + "." + day + " <span>" + hour + ":00</span>");
+			
+			// 차트 불러오기
 			getChart();
+			
 			
 			$(".btns img").on('mouseenter',function(){
 				var index = $(".btns img").index(this);
@@ -66,6 +78,7 @@
 				})
 			})
 			
+			
 			$(".allCheck").click(function(){
 				if($(".allCheck").is(':checked')){
 					$(".listcheck").prop('checked', true);
@@ -73,7 +86,11 @@
 					$(".listcheck").prop('checked', false);
 				}
 			})
+			
 		})
+		
+		
+		
 	</script>
 </body>
 </html>

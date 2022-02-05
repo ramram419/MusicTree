@@ -42,7 +42,7 @@
 			<div class="musicChart">
 				<div class="Ctitle">
 					실시간 차트
-					<div class="moreBtn">
+					<div class="moreBtn" onclick="location.href='/chart';">
 						더보기
 						<img src="${path}/static/img/arrow_right@2x.png"/>
 					</div>
@@ -52,11 +52,11 @@
 				</div>
 			</div>
 			
-			<!-- 인기 앨범 -->
+			<!-- 최신 앨범 -->
 			<div class="albumChart">
 				<div class="Ctitle">
-					인기 앨범
-					<div class="moreBtn">
+					최신 앨범
+					<div class="moreBtn" onclick="location.href='/music/album';">
 						더보기
 						<img src="${path}/static/img/arrow_right@2x.png"/>
 					</div>
