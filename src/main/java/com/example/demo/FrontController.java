@@ -10,7 +10,16 @@ public class FrontController {
 	public String Main() {
 		return "index";
 	}
-	
+	//로그인
+	@RequestMapping(value = "/login")
+	public String login() {
+		return "contents/login";
+	}
+	//회원가입
+	@RequestMapping(value = "/register")
+	public String register() {
+		return "contents/register";
+	}
 	@RequestMapping(value = "/chart")
 	public String chart() {
 		return "contents/musicChart";
