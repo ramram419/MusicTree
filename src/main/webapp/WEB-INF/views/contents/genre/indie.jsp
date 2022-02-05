@@ -12,11 +12,11 @@
 	<link rel="stylesheet" href="${path}/static/css/main.css"/>
 	
 <body>
-	<c:import url="../Top.jsp"/>
+	<c:import url="../../Top.jsp"/>
 	
 	<div class="Mcontent">
-		<div class="position">최신 음악 > 최신 곡</div>
-		<div class="title" style="text-align: center;">최신 곡</div>
+		<div class="position">장르 > 인디음악</div>
+		<div class="title" style="text-align: center;">인디음악</div>
 		<div class="btns">
 			<img src="${path}/static/img/allplay_btn_off@2x.png"/>
 			<img src="${path}/static/img/play_btn_off@2x.png"/>
@@ -37,7 +37,7 @@
 		</div>
 	</div>
 	
-	<c:import url="../footer.jsp"/>
+	<c:import url="../../footer.jsp"/>
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="${path}/static/js/musictree.js"></script>
